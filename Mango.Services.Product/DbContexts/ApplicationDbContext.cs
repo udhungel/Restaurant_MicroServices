@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using Mango.Services.ProductAPI.Models;
 
 namespace Mango.Services.ProductAPI.DbContexts
 {
@@ -6,9 +8,11 @@ namespace Mango.Services.ProductAPI.DbContexts
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)
         {
-           
+         
 
         }
+
+        public DbSet<MangoProduct> Products { get; set; }
 
 
     }
