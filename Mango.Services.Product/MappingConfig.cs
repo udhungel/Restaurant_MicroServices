@@ -14,4 +14,5 @@ namespace Mango.Services.ProductAPI
             });
             return mappingConfig;
         }
+    }
 }

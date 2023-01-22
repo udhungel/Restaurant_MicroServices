@@ -7,7 +7,7 @@
 
         Task<ProductDto> CreateUpdateProduct(ProductDto productDto);
 
-        Task<ProductDto> DeleteProduct(int productId);
+        Task<bool> DeleteProduct(int productId);
 
     }
 }
