@@ -10,7 +10,7 @@ namespace Manago.Web.Services.IServices
         public ResponseDto responseModel { get; set; }
         public IHttpClientFactory httpClient{ get; set; }
 
-        public BaseService(ResponseDto responseModel, IHttpClientFactory httpClient)
+        public BaseService(IHttpClientFactory httpClient)
         {
             this.responseModel = new ResponseDto();
             this.httpClient = httpClient;
