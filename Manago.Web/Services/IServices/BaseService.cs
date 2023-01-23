@@ -36,10 +36,10 @@ namespace Manago.Web.Services.IServices
                                     message.Method = HttpMethod.Post; 
                     break;
                     case SD.ApiType.PUT:
-                                    message.Method = HttpMethod.Post;
+                                    message.Method = HttpMethod.Put;
                     break;
                     case SD.ApiType.DELETE:
-                                    message.Method = HttpMethod.Post;
+                                    message.Method = HttpMethod.Delete;
                     break;
                     default: message.Method = HttpMethod.Get;
                     break;
