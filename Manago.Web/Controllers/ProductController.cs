@@ -23,5 +23,23 @@ namespace Manago.Web.Controllers
             }
             return View(list);
         }
+
+        public async Task<IActionResult> ProductCreate()
+        {           
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductCreate(ProductDto model)
+        {
+            
+            var response = await productService.CreateProductAsync<ResponseDto>(model);
+            if (response != null && response.IsSucess)
+            {
+                return RedirectToAction(nameof(ProductIndex));
+            }
+            return View(model);
+        }
     }
 }
