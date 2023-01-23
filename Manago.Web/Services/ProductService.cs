@@ -28,7 +28,7 @@ namespace Manago.Web.Services
             return await this.SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,               
-                ApiUrl = SD.ProductAPIBase + "/api/product" + id,
+                ApiUrl = SD.ProductAPIBase + "/api/product/" + id,
                 AccessToken = ""
             });
         }
@@ -48,7 +48,7 @@ namespace Manago.Web.Services
             return await this.SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                ApiUrl = SD.ProductAPIBase + "/api/product" + id,
+                ApiUrl = SD.ProductAPIBase + "/api/product/" + id,
                 AccessToken = ""
             });
         }
