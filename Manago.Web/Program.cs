@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 SD.ProductAPIBase = builder.Configuration["ServiceUrls:ProductAPI"];
 
 builder.Services.AddHttpClient<IProductService, ProductService>();
-builder.Services.AddScoped<IProductService, ProductService>();.
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
