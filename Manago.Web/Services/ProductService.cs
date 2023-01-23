@@ -38,7 +38,7 @@ namespace Manago.Web.Services
             return await this.SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                ApiUrl = SD.ProductAPIBase + "/api/products",
+                ApiUrl = SD.ProductAPIBase + "/api/product",
                 AccessToken = ""
             });
         }

@@ -2,7 +2,7 @@
 {
     public class ResponseDto
     {
-        public bool IsSucess { get; set; }
+        public bool IsSucess { get; set; } = true;
 
         public object Result { get; set; }
 
