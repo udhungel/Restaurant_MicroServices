@@ -18,7 +18,7 @@ namespace Manago.Web.Services
             {
                 ApiType = SD.ApiType.POST,
                 Data = productDto,
-                ApiUrl = SD.ProductAPIBase + "/api/products",
+                ApiUrl = SD.ProductAPIBase + "/api/product",
                 AccessToken = ""
             });
         }
@@ -28,7 +28,7 @@ namespace Manago.Web.Services
             return await this.SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,               
-                ApiUrl = SD.ProductAPIBase + "/api/products" + id,
+                ApiUrl = SD.ProductAPIBase + "/api/product" + id,
                 AccessToken = ""
             });
         }
@@ -48,7 +48,7 @@ namespace Manago.Web.Services
             return await this.SendAsync<T>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                ApiUrl = SD.ProductAPIBase + "/api/products" + id,
+                ApiUrl = SD.ProductAPIBase + "/api/product" + id,
                 AccessToken = ""
             });
         }
@@ -59,7 +59,7 @@ namespace Manago.Web.Services
             {
                 ApiType = SD.ApiType.PUT,
                 Data = productDto,
-                ApiUrl = SD.ProductAPIBase + "/api/products",
+                ApiUrl = SD.ProductAPIBase + "/api/product",
                 AccessToken = ""
             });
         }
