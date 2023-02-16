@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
-
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Manga.Services.Identity.Models;
 
