@@ -3,7 +3,7 @@ using Microsoft.Identity.Client;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Manga.Services.Identity.Models;
 
-namespace Mango.Services.ProductAPI.DbContexts
+namespace Mango.Services.DbContexts
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
