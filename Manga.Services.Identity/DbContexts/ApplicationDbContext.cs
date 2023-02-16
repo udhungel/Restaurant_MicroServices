@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
-using Mango.Services.ProductAPI.Models;
+
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Manga.Services.Identity.Models;
 
