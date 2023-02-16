@@ -22,13 +22,15 @@ namespace Manago.Web.Services.IServices
             {
                 var client = httpClient.CreateClient("MangoAPI");
                 HttpRequestMessage message = new HttpRequestMessage();              
-                message.Headers.Add("Accept", "application/json");
-                message.RequestUri = new Uri(apiRequest.ApiUrl);
-                if (apiRequest.Data !=null)
+                message.Headers.Add("Accept", "application/json"); 
+                message.RequestUri = new Uri(apiRequest.ApiUrl);  //Uri to send 
+                client.DefaultRequestHeaders.Clear(); //clear any default request header on client
+                if (apiRequest.Data !=null) //check if apiRequest has data
                 {
-                  message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data),Encoding.UTF8,"application/json");
+                  message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data),Encoding.UTF8,"application/json"); // set it to message.Content also Serialize it 
                 }
-
+                //once we have populated the data we get response from client 
+                //Api response
                 HttpResponseMessage apiResponse = null;
                 switch (apiRequest.ApiType)
                 {

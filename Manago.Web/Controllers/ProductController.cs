@@ -18,6 +18,7 @@ namespace Manago.Web.Controllers
         {
             List<ProductDto> list = new();
             var response = await productService.GetProductAsync<ResponseDto>();
+
             if (response != null && response.IsSucess) 
             {
                 list =JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));

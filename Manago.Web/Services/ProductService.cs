@@ -14,7 +14,7 @@ namespace Manago.Web.Services
 
         public async Task<T> CreateProductAsync<T>(ProductDto productDto)
         {
-            return await this.SendAsync<T>(new ApiRequest()
+            return await this.SendAsync<T>(new ApiRequest()   //access the base SendAsync and pass the responseDTO type 
             {
                 ApiType = SD.ApiType.POST,
                 Data = productDto,

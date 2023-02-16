@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Manago.Web.Services.IServices
 {
-    public interface IProductService
+    public interface IProductService : IBaseService
     {
         Task<T> GetProductAsync<T>();
 
